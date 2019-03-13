@@ -9,8 +9,8 @@ void initialiser_personnage(person *p,char m1[],char m2[],int nb)
 
 int i;
 for(i=0;i<nb;i++)
-{	p->tab[i]=IMG_Load(m);
-	if (perso==NULL)
+{	p->tab[i]=IMG_Load("");
+	if (p->tab[i]==NULL)
 		{printf("Error Loading person");
         	 return 1;}
 }
@@ -26,7 +26,7 @@ p->son=Load_Chunk(m2);
 
 void afficher_personnage(person *p,SDL_Surface *screen,int i)
 {
-SDL_BlitSurface(p->img[i],&(p->pos),screen,NULL);
+SDL_BlitSurface(p->tab[i],&(p->pos),screen,NULL);
 SDL_Flip(screen);
 
 
