@@ -2,10 +2,16 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 
-typedef struct{SDL_Surface tab[40];Mix_Chunk *son;Sdl_Rect pos;}person;
+typedef struct{
+SDL_Surface tab[40];
+Mix_Chunk *son;
+SDL_Rect pos;
+}person;
 
-void initialiser_personnage(SDL_Surface *perso,SDL_Rect *positionperso);
-void afficher_personnage(SDL_Surface *perso,SDL_Surface *screen);
+void initialiser_personnage(person *p,char m1[],char m2[],int nb);
+void afficher_personnage(person *p,SDL_Surface *screen,int i);
 void clean(SDL_Surface perso,SDL_Surface screen);
+
+
 
 
