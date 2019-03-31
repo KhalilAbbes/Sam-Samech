@@ -1,0 +1,49 @@
+void deplacement_personnage(person *perso,int sens, Background *bg)
+{
+
+if(sens==1)
+    {
+        if(perso->position.x>255)
+        perso->position.x-=2;
+        else
+        perso->position.x+=2;
+    }
+    if(sens==2)
+    {
+        if(perso->position.x<545)
+        perso->position.x+=2;
+        else
+        perso->position.x-=2;
+    }
+       if(sens==3)
+    {
+        if(perso->position.y>300)
+        perso->position.y+=2;
+        else
+        perso->position.y-=2;
+    } 
+    if(sens==4)
+    {
+        if(perso->position.y<300)
+        perso->position.y+=2;
+        else
+        perso->position.y-=2;
+    }
+}void animer_clavier(person* perso,int sens)
+{
+    if(sens==1 )
+    { 
+        if(perso->position_actuel>=15)
+        {
+            perso->position_actuel=1;
+        }
+        else
+        {
+            if(perso->position_actuel<16)
+            {
+            	perso->position_actuel++;
+            }
+            else 
+            {
+                perso->position_actuel=1;
+            }
