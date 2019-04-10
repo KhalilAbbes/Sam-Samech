@@ -1,2 +1,5 @@
-int collision_Parfaite(SDL_Surface *calque,SDL_Surface *perso
-,SDL_Rect posperso,int decalage,int d);
+#ifndef BACKGROUND_H_
+#define BACKGROUND_H_
+
+#endif /*BACKGROUND_H_*/
+
